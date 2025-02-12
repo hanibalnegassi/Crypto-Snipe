@@ -55,7 +55,7 @@ export default function Landing() {
           <svg width="50" height="50" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="11" fill="transparent" stroke='url(#starGradient)' strokeWidth="1" />
             <g transform="translate(7 7) scale(0.6)" >
-              <item.Icon style={{ fill: 'url(#starGradient)' }} className={styles["socialIcons"]} />
+              <item.Icon style={{ fill: 'url(#starGradient)'}} className={styles["socialIcons"]} />
             </g>
           </svg>
         </Link>
@@ -63,9 +63,10 @@ export default function Landing() {
     </div>
   );
 
+ 
   return (
     <>
-    <div className={' w-full'}>
+    <div className={' w-full '}>
     <FloatIcons />
       <svg height="0">
         <defs>
@@ -77,7 +78,7 @@ export default function Landing() {
       </svg>
   
       <div className="justify-center flex">
-       <img src={topBanner} className="brightness-25 lg:w-full object fixed " />
+    <img src={topBanner} className="brightness-25 lg:w-full object fixed h-screen" />
        </div>
       <div className={styles["welcomePage"] + ' w-full h-full relative z-[1] backdrop-blur-xs'}>
         <Box className={addClassNames(styles["top"], "ml-[40px] mr-[40px]")}>
@@ -88,7 +89,7 @@ export default function Landing() {
             )}
           >
             <Link to={"/"} className={styles["link"] + " no-underline"}>
-              <img src={logo} className="w-60" />
+              <img src={logo} className="w-60" style={{ width: "240px" }} />
             </Link>
             <div className="flex items-center space-x-[10px]">
               <button
@@ -107,46 +108,45 @@ export default function Landing() {
         </Box>
 
         <div className={styles["middle-text-section"]}>
-          <section className="mb-[-40px] mt-10">
-            <div className={styles["middle-text-innersection"]}>
+          <section className="mb-[-40px] sm: mt-20 lg:mt-14">
+            <div className={styles["middle-text-innersecton"]}>
               <Swiper
                 spaceBetween={30}
                 autoplay={{
-                  delay: 200500,
+                  delay: 2500,
                   disableOnInteraction: false,
                 }}
                 modules={[Autoplay]}
                 className={`font-semibold cursor-grab`}
               >
               <SwiperSlide className="flex flex-col items-center justify-center">
-              
-        <h1 className="md:text-7xl relative mx-6 w-[300px] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl">
-        <span className="gradient-text">Cutting-Edge</span> <span>AI-Powered </span><span>Crypto</span>
-                    {" "}  <span>Sniping Bot</span>  <span> Designed To Revolutionize</span>
-                    {" "}<span > The Way You Trade</span>  
-                  </h1>
-                  <div className="justify-center flex">
-                  {getStartedBtn}
-                  </div>
+            
+                  <SwiperSlide className="flex flex-col items-center justify-center">
+                   <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"> <span className="gradient-text">Cutting-Edge</span> Profitable Opportunities  <span>  AI-Powered Crypto Sniping Bot Designed To Revolutionize The Way You Trade </span></div>
+                             <div className="justify-center flex">
+                             {getStartedBtn}
+                             </div>
+                </SwiperSlide>
                 </SwiperSlide>
                 <SwiperSlide className="flex flex-col items-center justify-center">
-        <h1 className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl">
+        <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl">
          <span className="gradient-text">Crypto</span> Snipe Is Built On Advanced Algorithms
                     {" "} And Real-time Data 
                     {" "} To Monitor The Crypto Market 24/7
-                  </h1>
+                  </div>
+                  <div className="justify-center flex">
+                  {getStartedBtn}
+                  </div>
+                </SwiperSlide>
+                
+                <SwiperSlide className="flex flex-col items-center justify-center">
+        <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"> <span className="gradient-text">Detects</span> Profitable Opportunities  <span>  And Executes Trades At Lightning Speed, </span>Ensuring You Never Miss Out On The Next Big Move </div>
                   <div className="justify-center flex">
                   {getStartedBtn}
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="flex flex-col items-center justify-center">
-        <h1 className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"> <span className="gradient-text">Detects</span> Profitable Opportunities  <span>  And Executes Trades At Lightning Speed, </span>Ensuring You Never Miss Out On The Next Big Move </h1>
-                  <div className="justify-center flex">
-                  {getStartedBtn}
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="flex flex-col items-center justify-center">
-                   <h1 className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"><span className="gradient-text">Our</span> Advanced Algorithms Are Hard At Work, <span>  Seizing Every Profitable Opportunity On Your</span>  Behalf Even While You Sleep</h1>
+                   <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"><span className="gradient-text">Our</span> <span>Advanced Algorithms Are Hard At Work, </span> <span>  Seizing Every Profitable Opportunity On Your</span>  <span>Behalf Even While You Sleep</span></div>
                  <div className="justify-center flex">
                   {getStartedBtn}
                  </div>
@@ -154,13 +154,13 @@ export default function Landing() {
               </Swiper>
             </div>
           </section>
-          <center>
+          <center className="mt-20">
             <h1 className="font-semibold">
              <span className="gradient-text">Key </span>Features </h1>
           </center>
            <KeyFeatures />
           <section>
-            <div className="mt-14 mb-14">
+            <div className="mt-14 mb-10">
              {getStartedBtn}
             </div>
           <center>

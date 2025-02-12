@@ -7,3 +7,4 @@
 [C] => create a docker file at root
 [C] => build the docker image locally and test it 
 [] => log into remote server
+[] => get the https certificate from certbot 

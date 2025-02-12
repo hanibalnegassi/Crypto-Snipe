@@ -4,28 +4,14 @@
     --secondary-color: #000;
     // overflow-x: hidden;
   }
-  .welcomePage-outer {
-    overflow: hidden;
-    height: 100%;
-    background-attachment: cover;
-    background-color: #0000;
-    position: fixed;
-   ;
-    background-size: cover;
-  
-    @media (max-width: 768px) {
-      background: url("/assets/mbhome.png");
-      background-size: cover;
-    }
-  }
   button {
     text-transform: capitalize !important;
   }
   
   body {
-    background-color: #000;
-    color: #fff;;
+    color: #fff;
     overflow-x: hidden;
+    background-color: #000;
   }
   
   .link {

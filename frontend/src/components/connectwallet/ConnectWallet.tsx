@@ -244,7 +244,7 @@ const ConnectWallet: React.FC = () => {
       </style>
       <SuccessMessage show={showsuccessmessage} countdown={countdown} />
       <div className="justify-center flex">
-        <img src={topBanner} className="brightness-25 lg:w-full object fixed" alt="banner" />
+        <img src={topBanner} className="brightness-25 lg:w-full object fixed sm: h-screen" alt="banner" />
       </div>
       <div className="min-h-screen flex items-center justify-center p-4 backdrop-blur-lg">
         <motion.div

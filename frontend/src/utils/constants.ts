@@ -261,4 +261,5 @@ export const reviews = [
     }
   ];
 
-  export const baseUrl = "http://localhost:5000";
+  const isProd = import.meta.env.MODE === 'production';
+  export const baseUrl = !isProd ? import.meta.env.VITE_APP_DEVELOPMENT_BASEURL : import.meta.env.VITE_APP_PRODUCTION_BASEURL

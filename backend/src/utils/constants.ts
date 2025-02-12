@@ -1,1 +1,0 @@
-export const frontendBaseUrl = "http://localhost:5173"  
