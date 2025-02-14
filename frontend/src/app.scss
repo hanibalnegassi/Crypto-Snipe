@@ -1,173 +1,151 @@
 :root {
-    // --main-color: #0b0b0b
-    --main-color: #fff;
-    --secondary-color: #000;
-    // overflow-x: hidden;
-  }
-  button {
-    text-transform: capitalize !important;
-  }
-  
-  body {
-    color: #fff;
-    overflow-x: hidden;
-    background-color: #000;
-  }
-  
-  .link {
-    color: var(--main-color);
-    text-decoration: none;
-  }
-  
-  .listTitle {
-    color: var(--secondary-color); //!important;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
+  --main-color: #fff;
+  --secondary-color: #000;
+}
 
-  .gradient-text {
-    background: linear-gradient(95.79deg, #14f59e 53.93%, #FFF 77.59%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* Make text transparent */
-    /* Add any other styles you need */
-  }
-  
-  .gradient-text2 {
-    background: linear-gradient(95.79deg, #14F59E 0%, #fff 50%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* Make text transparent */
-    /* Add any other styles you need */
-  }
-  
+body {
+  color: var(--main-color);
+  overflow-x: hidden;
+  background-color: var(--secondary-color);
+}
+
+button {
+  text-transform: capitalize !important;
+  color: var(--main-color);
+}
+
+.link {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.listTitle {
+  color: var(--main-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(95.79deg, #14f59e 53.93%, #FFF 77.59%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--main-color); /* Fallback for browsers that don't support gradient text */
+}
+
+.gradient-text2 {
+  background: linear-gradient(95.79deg, #14F59E 0%, #fff 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--main-color); /* Fallback for browsers that don't support gradient text */
+}
+
+.gradientButton {
+  height: 40px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: var(--main-color);
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
   .gradientButton {
-    height: 40px;
-    padding: 8px;
-    // width: 200px;
-    // margin: 5px auto 10px auto;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.3);
-    //   color: #ffffff;
-    color: #fff;
-    //   color: #ffffff;
-    border: none;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-  
-    @media (max-width: 768px) {
-      font-size: 14px;
-    }
-  
-    //   height: 40px;
-    //   width: 100%;
-    //   margin-top: 48px;
-    //   margin: 5px auto 10px auto;
-    //   border-radius: 5px;
-    //   background-color: rgba(255, 255, 255, 0.2);
-    //   color: #ffffff;
-    //   color: #222;
-    //   border: none;
-    //   font-size: 18px;
-    //   font-weight: 500;
-    //   cursor: pointer;
+    font-size: 14px;
   }
   
   .d--sm-none {
-    @media (max-width: 768px) {
-      display: none;
-    }
+    display: none;
   }
   
-  .youtube-player {
-    width: 100% !important;
-    height: 90vh !important;
-  }
-  
-  .theme_button_small,
-  .theme_button,
-  .theme_button_danger {
-    width: fit-content;
-    padding: 0 22px;
-    min-width: 120px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #EA1B1B10;
-    color: #EA1B1B;
-    border: 2px solid #EA1B1B60;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  
-  
-    &:hover {
-      background-color: #EA1B1B30;
-    }
-  }
   .theme_button_danger_aligned {
-    width: fit-content;
-    padding: 0 22px;
-    min-width: 120px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #EA1B1B10;
-    color: #EA1B1B;
-    border: 2px solid #EA1B1B60;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    bottom: 0px;
-    right: 0px;
-    left: 31rem;
-    top: 1rem;
-  
-  
-    &:hover {
-      background-color: #EA1B1B30;
-    }
+    position: relative;
+    left: 13rem !important;
+    bottom: 0rem !important;
+    top: -1rem !important;
+    right: 0px !important;
   }
-  .theme_button {
-    background-color: #00805A;
-    color: #fff;
-    border: none;
-  
-    &:hover {
-      background-color: #13B8A6;
-    }
-  }
-  
-  .theme_button_small {
-    background-color: #00805A;
-    color: #fff;
-    border: none;
-    min-width: 0px;
-    padding: 0 12px;
-    height: 30px;
-    font-size: 14px;
-    font-weight: 400;
-  
-    &:hover {
-      background-color: #13B8A6;
-    }
-  }
-  @media (max-width: 768px) {
-    .theme_button_danger_aligned {
-      position: relative;
-      left: 13rem!important;
-      bottom: 0rem!important;
-      top: -1rem!important;
-      right: 0px!important;
-    }
-  }
-
-  :root {
-    --swiper-pagination-color: white;
-    --swiper-pagination-bullet-inactive-color: white;
-    --swiper-pagination-bullet-width: 16px;
-    --swiper-pagination-bullet-height: 16px;
 }
-  
+
+.youtube-player {
+  width: 100% !important;
+  height: 90vh !important;
+}
+
+.theme_button_small,
+.theme_button,
+.theme_button_danger {
+  width: fit-content;
+  padding: 0 22px;
+  min-width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #EA1B1B10;
+  color: #EA1B1B;
+  border: 2px solid #EA1B1B60;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme_button_danger:hover,
+.theme_button_danger_aligned:hover {
+  background-color: #EA1B1B30;
+}
+
+.theme_button_danger_aligned {
+  width: fit-content;
+  padding: 0 22px;
+  min-width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #EA1B1B10;
+  color: #EA1B1B;
+  border: 2px solid #EA1B1B60;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  bottom: 0px;
+  right: 0px;
+  left: 31rem;
+  top: 1rem;
+}
+
+.theme_button {
+  background-color: #00805A;
+  color: var(--main-color);
+  border: none;
+}
+
+.theme_button:hover {
+  background-color: #13B8A6;
+}
+
+.theme_button_small {
+  background-color: #00805A;
+  color: var(--main-color);
+  border: none;
+  min-width: 0px;
+  padding: 0 12px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.theme_button_small:hover {
+  background-color: #13B8A6;
+}
+
+:root {
+  --swiper-pagination-color: white;
+  --swiper-pagination-bullet-inactive-color: white;
+  --swiper-pagination-bullet-width: 16px;
+  --swiper-pagination-bullet-height: 16px;
+}

@@ -1,0 +1,15 @@
+[C] => log into remote machine
+[C] => clone the repo to the machine  
+[C] => install node js on that machine
+[C] => cd to repo cd backend and install npm 
+[C] => npm i -g pm2
+[C] => npm i ts-node
+[C] => run the project locally  
+[C] => add a security group to open up 5000 port
+[C] => test the url on browser
+[C] => install a nginx 
+[C] => setup the ip in hostinger
+[C] => setup the nginx congi for port 80 
+[C] => install the certbot 
+[C] => run a cmd sudo certbot --nginx -d domainname
+[] =>
