@@ -12,4 +12,4 @@
 [C] => setup the nginx congi for port 80 
 [C] => install the certbot 
 [C] => run a cmd sudo certbot --nginx -d domainname
-[] =>
+[] => 
