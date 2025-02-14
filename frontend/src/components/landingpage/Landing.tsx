@@ -68,17 +68,8 @@ export default function Landing() {
     <>
     <div className={' w-full '}>
     <FloatIcons />
-      <svg height="0">
-        <defs>
-          <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="53.93%" stopColor="#14FA9B" />
-            <stop offset="77.59%" stopColor="#128EE9" />
-          </linearGradient>
-        </defs>
-      </svg>
-  
       <div className="justify-center flex">
-    <img src={topBanner} className="brightness-25 lg:w-full object fixed h-screen" />
+       <img src={topBanner} className="brightness-25 lg:w-full object fixed h-screen" />
        </div>
       <div className={styles["welcomePage"] + ' w-full h-full relative z-[1] backdrop-blur-xs'}>
         <Box className={addClassNames(styles["top"], "ml-[40px] mr-[40px]")}>
@@ -88,8 +79,8 @@ export default function Landing() {
               "flex pt-9 items-center justify-between"
             )}
           >
-            <Link to={"/"} className={styles["link"] + " no-underline"}>
-              <img src={logo} className="w-60" style={{ width: "240px" }} />
+            <Link to={"/"} className={" no-underline"}>
+              <img src={logo} className="lg:w-70 sm: w-40" />
             </Link>
             <div className="flex items-center space-x-[10px]">
               <button
@@ -122,7 +113,7 @@ export default function Landing() {
               <SwiperSlide className="flex flex-col items-center justify-center">
             
                   <SwiperSlide className="flex flex-col items-center justify-center">
-                   <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"> <span className="gradient-text">Cutting-Edge</span> Profitable Opportunities  <span>  AI-Powered Crypto Sniping Bot Designed To Revolutionize The Way You Trade </span></div>
+                   <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"> <span className="gradient-text">Cutting-Edge</span> <span>Profitable Opportunities</span>  <span>  AI-Powered Crypto Sniping Bot Designed To Revolutionize The Way You Trade </span></div>
                              <div className="justify-center flex">
                              {getStartedBtn}
                              </div>
@@ -130,9 +121,10 @@ export default function Landing() {
                 </SwiperSlide>
                 <SwiperSlide className="flex flex-col items-center justify-center">
         <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl">
-         <span className="gradient-text">Crypto</span> Snipe Is Built On Advanced Algorithms
-                    {" "} And Real-time Data 
-                    {" "} To Monitor The Crypto Market 24/7
+         <span className="gradient-text">Crypto</span> 
+                   <span>Snipe Is Built On Advanced Algorithms</span>
+                    <span>{" "} And Real-time Data</span> 
+                    {" "} <span>To Monitor The Crypto Market 24/7</span>
                   </div>
                   <div className="justify-center flex">
                   {getStartedBtn}
@@ -140,7 +132,7 @@ export default function Landing() {
                 </SwiperSlide>
                 
                 <SwiperSlide className="flex flex-col items-center justify-center">
-        <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"> <span className="gradient-text">Detects</span> Profitable Opportunities  <span>  And Executes Trades At Lightning Speed, </span>Ensuring You Never Miss Out On The Next Big Move </div>
+        <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"> <span className="gradient-text">Detects</span> <span>Profitable Opportunities</span>  <span>  And Executes Trades At Lightning Speed, </span> <span>Ensuring You Never Miss Out On The Next Big Move </span></div>
                   <div className="justify-center flex">
                   {getStartedBtn}
                   </div>

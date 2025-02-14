@@ -9,11 +9,6 @@ body {
   background-color: var(--secondary-color);
 }
 
-button {
-  text-transform: capitalize !important;
-  color: var(--main-color);
-}
-
 .link {
   color: var(--main-color);
   text-decoration: none;
@@ -31,8 +26,16 @@ button {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: var(--main-color); /* Fallback for browsers that don't support gradient text */
+  text-fill-color: transparent;
+  color: #14f59e; /* Fallback */
+  display: inline-block;
+  position: relative;
+
+  /* Safari Fix */
+  -webkit-mask-image: linear-gradient(95.79deg, #14f59e 53.93%, #FFF 77.59%);
+  -webkit-mask-clip: text;
 }
+
 
 .gradient-text2 {
   background: linear-gradient(95.79deg, #14F59E 0%, #fff 50%);
