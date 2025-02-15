@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { PiInstagramLogoFill, PiTiktokLogoFill, PiXLogoFill, PiYoutubeLogoFill } from "react-icons/pi";
 import { Link, useNavigate } from "react-router-dom";
@@ -21,6 +21,7 @@ import topBanner from "/assets/banner.png";
 import FloatIcons from "./FloatIcons";
 import { faq, reviews } from "../../utils/constants";
 import KeyFeatures from "./KeyFeatures";
+import tradingImage from "/assets/trading.png"
 
 const socialIcons = [
   { Icon: PiYoutubeLogoFill, url: '#' },
@@ -33,7 +34,10 @@ const socialIcons = [
 export default function Landing() {
   const navigate = useNavigate();
   const onSignUp = useCallback(() => navigate('/connect-wallet'), []);
-
+  //@ts-ignore
+  const [isHoverTradingImage, setIsHoverTradingImage] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
   const getStartedBtn = (
     <button
       className="theme_button_danger mx-auto my-1 block"
@@ -53,9 +57,9 @@ export default function Landing() {
       {socialIcons.map((item, index) => (
         <Link key={index} to={item.url}>
           <svg width="50" height="50" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="11" fill="transparent" stroke='url(#starGradient)' strokeWidth="1" />
+            <circle cx="12" cy="12" r="11" fill="green-500" stroke='url(#starGradient)' strokeWidth="1" />
             <g transform="translate(7 7) scale(0.6)" >
-              <item.Icon style={{ fill: 'url(#starGradient)'}} className={styles["socialIcons"]} />
+              <item.Icon style={{ fill: "white"}} className={styles["socialIcons"]} />
             </g>
           </svg>
         </Link>
@@ -63,6 +67,15 @@ export default function Landing() {
     </div>
   );
 
+  const handleClickTradingImage = () => {
+     setIsHoverTradingImage(true);
+  } 
+  const handleMouseMove = (e: any) => {
+    const { left, top, width, height } = e.target.getBoundingClientRect();
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
+    setPosition({ x, y });
+  };
  
   return (
     <>
@@ -109,36 +122,12 @@ export default function Landing() {
                 }}
                 modules={[Autoplay]}
                 className={`font-semibold cursor-grab`}
-              >
-              <SwiperSlide className="flex flex-col items-center justify-center">
-            
-                  <SwiperSlide className="flex flex-col items-center justify-center">
-                   <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"> <span className="gradient-text">Cutting-Edge</span> <span>Profitable Opportunities</span>  <span>  AI-Powered Crypto Sniping Bot Designed To Revolutionize The Way You Trade </span></div>
-                             <div className="justify-center flex">
-                             {getStartedBtn}
-                             </div>
-                </SwiperSlide>
-                </SwiperSlide>
+              > 
                 <SwiperSlide className="flex flex-col items-center justify-center">
-        <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl">
-         <span className="gradient-text">Crypto</span> 
-                   <span>Snipe Is Built On Advanced Algorithms</span>
-                    <span>{" "} And Real-time Data</span> 
-                    {" "} <span>To Monitor The Crypto Market 24/7</span>
-                  </div>
-                  <div className="justify-center flex">
-                  {getStartedBtn}
-                  </div>
-                </SwiperSlide>
-                
-                <SwiperSlide className="flex flex-col items-center justify-center">
-        <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"> <span className="gradient-text">Detects</span> <span>Profitable Opportunities</span>  <span>  And Executes Trades At Lightning Speed, </span> <span>Ensuring You Never Miss Out On The Next Big Move </span></div>
-                  <div className="justify-center flex">
-                  {getStartedBtn}
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="flex flex-col items-center justify-center">
-                   <div className="md:text-7xl relative dark:from-white dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl"><span className="gradient-text">Our</span> <span>Advanced Algorithms Are Hard At Work, </span> <span>  Seizing Every Profitable Opportunity On Your</span>  <span>Behalf Even While You Sleep</span></div>
+                   <div className="md:text-7xl relative dark:from-white flex gap-3 flex-col dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-serif leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-2xl">
+                    <span> 
+                      <span className="gradient-text">10x</span> Your Crypto Profits </span>
+                    <span>Guaranteed With AI</span></div>
                  <div className="justify-center flex">
                   {getStartedBtn}
                  </div>
@@ -146,9 +135,45 @@ export default function Landing() {
               </Swiper>
             </div>
           </section>
-          <center className="mt-20">
+          <div
+      className={`mt-30 mb-14 flex justify-center`}
+    >
+      
+      <div
+        className="relative mt-12"
+        onMouseMove={handleMouseMove} // Track mouse position over the image
+      >
+        <img
+          src={tradingImage}
+          className="rounded-3xl cursor-pointer transition-transform duration-300"
+          onClick={() => {
+            setIsZoomed(!isZoomed); // Toggle zoom on click
+            handleClickTradingImage(); // Call the original handler
+          }}
+          style={{
+            transform: isZoomed ? 'scale(1.5)' : 'scale(1)', // Zoom effect
+            transformOrigin: `${position.x}% ${position.y}%`, // Zoom at mouse cursor
+            transition: 'transform 0.3s ease',
+            objectFit: 'cover',
+          }}
+        />
+        {/* Optional: Add a zoomed preview */}
+        {isZoomed && (
+          <div
+            className="absolute top-0 left-0 w-full h-full bg-cover"
+            style={{
+              backgroundImage: `url(${tradingImage})`,
+              backgroundPosition: `${position.x}% ${position.y}%`, // Center the zoomed area
+              backgroundSize: '200%', // Make the zoomed portion larger
+              pointerEvents: 'none', // Prevent interaction with the preview
+            }}
+          />
+        )}
+      </div>
+    </div>
+          <center className="sm: mt-0 lg:mt-10">
             <h1 className="font-semibold">
-             <span className="gradient-text">Key </span>Features </h1>
+             <span className="gradient-text">Key </span> Features </h1>
           </center>
            <KeyFeatures />
           <section>
@@ -191,10 +216,10 @@ export default function Landing() {
                 </p>
                 <p className="text-gray-200 leading-relaxed flex-grow">{x.description}</p>
                 <div className="flex space-x-1">
-                  {//@ts-ignore
-                  Array.from({ length: x.stars }, (_, index1) => (
-                    <GradientStarIcon key={index1} />
-                  ))}
+                <div className={"flex" }>
+                        {Array.from({ length: x.stars }, () => 0)
+                          .map((_, index) => <GradientStarIcon key={index} />)}
+                    </div>
                 </div>
                 <div className="mt-4">
                   <div className="h-1 w-12 bg-gradient-to-r from-green-500 to-white rounded"></div>

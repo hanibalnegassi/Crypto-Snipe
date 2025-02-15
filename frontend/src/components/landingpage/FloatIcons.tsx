@@ -15,11 +15,11 @@ const FloatIcons = () => {
   };
 
   return (
-    <div className="absolute w-full h-screen ">
+    <div className="absolute w-full h-screen">
       <div className="absolute w-full">
         <motion.img
          src={ethLogo}
-          className="absolute lg:w-11 top-32 lg:top-30 lg:right-20 sm: w-7 sm: right-10"
+          className="absolute lg:w-11 top-32 lg:top-30 lg:right-70 sm: w-7 sm: right-10"
           animate={floatAnimation}
           transition={transitionProps}
           style={{ zIndex: 10, filter: `drop-shadow(0px 2px 20px rgba(0, 123, 255, 0.9))` }}
@@ -28,7 +28,7 @@ const FloatIcons = () => {
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 256 256"
-          className="absolute w-7 lg:w-11 top-80 lg:top-[420px] left-10 lg:left-[170px]"
+          className="absolute w-7 lg:w-11 top-70 lg:top-[340px] left-10 lg:left-[250px]"
           animate={floatAnimation}
           style={{ zIndex: 10, filter: `drop-shadow(0 2px 20px rgba(247, 147, 26, 0.9))` }}
           transition={transitionProps}
@@ -42,7 +42,7 @@ const FloatIcons = () => {
         </motion.svg>
 
         <motion.svg
-          className="absolute w-8 lg:w-14 top-32 lg:top-32 left-10 lg:left-10"
+          className="absolute w-8 lg:w-14 top-32 lg:top-32 left-10 lg:left-60"
           viewBox="-7.04 -7.04 78.08 78.08"
           xmlns="http://www.w3.org/2000/svg"
           animate={floatAnimation}
@@ -55,7 +55,7 @@ const FloatIcons = () => {
 
         <motion.svg
           viewBox="0 0 32 32"
-          className="absolute w-7 lg:w-12 top-[370px] lg:top-[520px] right-20 lg:right-[355px] rounded-full"
+          className="absolute w-7 lg:w-12 top-[340px] lg:top-[370px] right-20 lg:right-[355px] rounded-full"
           animate={floatAnimation}
           transition={transitionProps}
           style={{
@@ -71,7 +71,7 @@ const FloatIcons = () => {
 
         <motion.svg
           viewBox="0 0 32 32"
-          className="absolute w-7 lg:w-12 top-[320px] lg:top-[410px] right-12 lg:right-[265px] rounded-full"
+          className="absolute w-7 lg:w-12 top-[280px] lg:top-[310px] right-10 lg:right-[265px] rounded-full"
           animate={floatAnimation}
           transition={transitionProps}
           style={{
@@ -87,7 +87,7 @@ const FloatIcons = () => {
 
         <motion.img
           src={baseLogo}
-          className="absolute w-7 lg:w-12 top-[370px] lg:top-[520px] left-16 lg:left-[225px] rounded-full"
+          className="absolute w-7 lg:w-12 top-[340px] lg:top-[400px] left-20 lg:left-[325px] rounded-full"
           animate={floatAnimation}
           style={{ zIndex: 10, filter: `drop-shadow(0 2px 20px rgba(247, 147, 26, 0.9))` }}
           transition={transitionProps}

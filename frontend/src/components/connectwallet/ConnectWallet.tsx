@@ -301,7 +301,7 @@ const ConnectWallet: React.FC = () => {
                 </motion.span>
               )}
             </motion.div>
-
+           <div className='flex justify-center'>
             <motion.button
               type="submit"
               className={`theme_button_danger block w-full py-3 px-4 rounded-lg font-medium
@@ -327,6 +327,7 @@ const ConnectWallet: React.FC = () => {
                   "Connect Wallet"
                 )}
               </motion.button>
+              </div>
             </form>
           </motion.div>
         </div>
