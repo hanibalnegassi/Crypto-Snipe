@@ -1,3 +1,6 @@
+import { FaFacebookF } from "react-icons/fa";
+import { PiInstagramLogoFill, PiTiktokLogoFill, PiXLogoFill, PiYoutubeLogoFill } from "react-icons/pi";
+
 export const reviews = [
   {
     name: "Alex M -",
@@ -263,3 +266,12 @@ export const reviews = [
 
   const isProd = import.meta.env.MODE === 'production';
   export const baseUrl = !isProd ? import.meta.env.VITE_APP_DEVELOPMENT_BASEURL : import.meta.env.VITE_APP_PRODUCTION_BASEURL
+
+  export const socialIcons = [
+    { Icon: PiYoutubeLogoFill, url: '#' },
+    { Icon: PiTiktokLogoFill, url: '#' },
+    { Icon: PiXLogoFill, url: '#' },
+    { Icon: PiInstagramLogoFill, url: '#' },
+    { Icon: FaFacebookF, url: '#' }
+  ];
+  

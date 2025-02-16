@@ -14,7 +14,6 @@ const KeyFeatures = () => {
               className="p-6 rounded-xl border border-gray-700 hover:border-gray-500 transition-all duration-300 "
             >
               <div className="flex flex-col h-full">
-                <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-white to-transparent font-serif">
                   {feature.title}
                 </h3>
