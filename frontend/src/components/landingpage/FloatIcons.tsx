@@ -55,7 +55,7 @@ const FloatIcons = () => {
 
         <motion.svg
           viewBox="0 0 32 32"
-          className="absolute w-7 lg:w-12 top-[340px] lg:top-[370px] right-20 lg:right-[355px] rounded-full"
+          className="absolute w-7 lg:w-12 top-[340px] lg:top-[370px] right-14 lg:right-[355px] rounded-full"
           animate={floatAnimation}
           transition={transitionProps}
           style={{
@@ -87,7 +87,7 @@ const FloatIcons = () => {
 
         <motion.img
           src={baseLogo}
-          className="absolute w-7 lg:w-12 top-[340px] lg:top-[400px] left-20 lg:left-[325px] rounded-full"
+          className="absolute w-7 lg:w-12 top-[340px] lg:top-[400px] left-14 lg:left-[325px] rounded-full"
           animate={floatAnimation}
           style={{ zIndex: 10, filter: `drop-shadow(0 2px 20px rgba(247, 147, 26, 0.9))` }}
           transition={transitionProps}

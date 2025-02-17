@@ -113,14 +113,14 @@ export default function Landing() {
                   <SwiperSlide className="flex flex-col items-center justify-center">
                     <div className="md:text-7xl relative dark:from-white flex gap-3 flex-col dark:to-[#AAAAAA] bg-gradient-to-b from-black/80 to-black bg-clip-text pb-4 text-center font-bold leading-tight text-transparent md:!w-full lg:text-6xl xl:leading-snug sm: text-3xl">
                       <span>
-                        <span className="gradient-text">10x</span> Your Crypto
+                        <span>10x</span> Your Crypto
                         Profits
                       </span>
                       <span>Guaranteed With AI</span>
                     </div>
                     <div className="flex justify-center items-center gap-1">
                       <span className="lg:text-2xl sm: text-md">Powered By</span>
-                      <div className="mt-1 flex gap-0 items-center">
+                      <div className="mt-1 flex gap-1 items-center">
                         <NvidiaSvg height="39px" width="45px" />
                         <span className="lg:text-xl sm: text-md">NVIDIA</span>
                       </div>
@@ -132,26 +132,26 @@ export default function Landing() {
             </section>
             <div className="lg:mt-22 sm: mt-20 justify-center flex items-center flex-col lg:gap-6">
               <div className="flex items-center gap-2">
-                <span className="gradient-text lg:text-5xl sm: text-2xl font-bold">
+                <span className="lg:text-5xl sm: text-2xl font-bold"  style={{ color: "white" }}>
                   In Partnership 
                 </span>
-                <span className="lg:text-5xl sm: text-xl font-bold">With</span>
-                <div className="lg: hidden">
+                <span className="lg:text-5xl sm: text-xl font-bold" style={{ color: "white" }}>With</span>
+                <div className="sm: hidden lg:block">
                  <NvidiaSvg width="62px" height="62px" />
                 </div>
                 <div className="lg:hidden">
                 <NvidiaSvg width="32px" height="32px" />
                 </div>
-                <span className="font-bold lg:text-5xl sm: text-xl text-white">NVIDIA</span>
+                <span className="font-bold lg:text-5xl sm: text-xl" style={{ color: "white" }}>NVIDIA</span>
               </div>
               <div className="flex justify-center m-12 mt-[30px]">
                 <p className="lg:text-2xl sm: text-sm text-gray-300">
-                  <span className="gradient-text font-bold">NVIDIA</span> - "We
+                  <div className="font-bold flex items-center gap-2"> <div className="sm: hidden lg:block"><NvidiaSvg width="50px" height="50px" /> </div> <div className="lg:hidden"><NvidiaSvg width="30px" height="30px" /></div> <span className="sm: text-md lg:text-xl" >NVIDIA</span></div> - We
                   partnered with Crypto Snipe to revolutionize crypto trading! Our
                   advanced AI technology and powerful GPUs will significantly
                   enhance Crypto Snipe's trading algorithms, making them even more
                   efficient and effective. This partnership leads to faster, more
-                  accurate trades, and guaranteed higher profits for users."
+                  accurate trades, and guaranteed higher profits for users.
                 </p>
               </div>
             </div>
@@ -188,9 +188,10 @@ export default function Landing() {
                 )}
               </div>
             </div>
+            <div className="mt-14 mb-10">{getStartedBtn}</div>
             <center className="sm: mt-0 lg:mt-10">
               <h1 className="font-bold text-white">
-                <span className="gradient-text">Key</span> Features
+                Key Features
               </h1>
             </center>
             <KeyFeatures />
@@ -198,7 +199,7 @@ export default function Landing() {
               <div className="mt-14 mb-10">{getStartedBtn}</div>
               <center>
                 <h1 className="font-bold">
-                  <span className="gradient-text font-bold">See</span> What 20M+ Satisfied
+                  See What 20M+ Satisfied
                   Users Are Saying
                 </h1>
               </center>
@@ -230,7 +231,7 @@ export default function Landing() {
                         style={{ minHeight: "220px" }} // Adjust minHeight as per your preference
                       >
                         <div className="flex flex-col h-full">
-                          <p className="text-xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-white via-white">
+                          <p className="text-xl font-bold mb-3 bg-clip-text text-white">
                             {x.name}
                           </p>
                           <p className="text-gray-200 leading-relaxed flex-grow">
@@ -257,8 +258,8 @@ export default function Landing() {
             </section>
             <div className="mt-14">{getStartedBtn}</div>
             <center>
-              <h1 className="font-bold">
-                <span className="gradient-text font-bold">Frequently</span> Asked Questions
+              <h1 className="font-bold ">
+               Frequently Asked Questions
               </h1>
             </center>
             <div
@@ -282,7 +283,7 @@ export default function Landing() {
             </button>
             <center>
               <h1 className="font-bold">
-                <span className="gradient-text">Connect</span> With Us
+                Connect With Us
               </h1>
             </center>
             <div
