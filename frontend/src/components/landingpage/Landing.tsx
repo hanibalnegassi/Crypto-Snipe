@@ -279,7 +279,7 @@ export default function Landing() {
               }}
               onClick={onSignUp}
             >
-              CONNECT WALLET
+              Connect Wallet
             </button>
             <center>
               <h1 className="font-bold">

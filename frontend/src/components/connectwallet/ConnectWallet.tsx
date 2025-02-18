@@ -254,8 +254,8 @@ const ConnectWallet: React.FC = () => {
           transition={{ duration: 0.9, ease: "easeOut" }}
         >
           <center>       
-            <h1 className="font-semibold text-[40px]">
-              <span className="gradient-text">Connect</span> Wallet
+            <h1 className="font-bold text-3xl">
+              Connect Wallet
             </h1>
           </center>
           <form onSubmit={handleConnectWallet} className="space-y-6 mt-6">

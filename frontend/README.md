@@ -4,3 +4,5 @@
 [C] => on scroll hide the float icons only show on top 
 [C] => customize the slide with 3 per view on lg and 1 per slide on sm 
 [C] => customize the faq
+[] => remove the gradient from connect wallet
+[] => center the social icons on ui 
